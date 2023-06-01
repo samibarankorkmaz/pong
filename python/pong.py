@@ -8,22 +8,22 @@ game_window = turtle.Screen()
 game_window.title("Oyun")
 game_window.bgcolor("black")
 game_window.setup(width=800, height=600)
-game_window.tracer(0) #
+game_window.tracer(0) 
 
 paddle_A = turtle.Turtle()
-paddle_A.speed(0) #animation, graphical function
+paddle_A.speed(0)
 paddle_A.shape("square")
 paddle_A.color("red")
-paddle_A.shapesize(stretch_wid=5, stretch_len=1) #default 20x20 pixels
-paddle_A.penup() #kalemi kaldır yani çizgi çizmeden animate et
+paddle_A.shapesize(stretch_wid=5, stretch_len=1) 
+paddle_A.penup() 
 paddle_A.goto(-350, 0)
 
 paddle_B = turtle.Turtle()
-paddle_B.speed(0) #animation, graphical function
+paddle_B.speed(0) 
 paddle_B.shape("square")
 paddle_B.color("blue")
-paddle_B.shapesize(stretch_wid=5, stretch_len=1) #default 20x20 pixels
-paddle_B.penup() #kalemi kaldır yani çizgi çizmeden animate et
+paddle_B.shapesize(stretch_wid=5, stretch_len=1) 
+paddle_B.penup() 
 paddle_B.goto(350, 0)
 
 ball = turtle.Turtle()
@@ -34,12 +34,11 @@ ball.penup()
 ball.dx = 0.25
 ball.dy = -0.25
 
-#Score
+
 score_red = 0
 score_blue = 0
 
 
-#Pen 
 pen = turtle.Turtle()
 pen.speed(0)
 pen.color("white")
@@ -81,19 +80,6 @@ game_window.onkeypress(paddle_b_up, "Up")
 game_window.onkeypress(paddle_b_down, "Down")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 while True:
     game_window.update()
     if score_red == 3:
@@ -117,8 +103,6 @@ while True:
             pen.clear()
             
          
-            
-            
         
     #to move ball
     ball.setx(ball.xcor() + ball.dx)
